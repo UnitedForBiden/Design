@@ -1,0 +1,446 @@
+/* basic styles */
+
+body {
+  background: #F7F6F2;
+  font-family: 'Brother 1816 Book';
+  font-size: 11pt;
+  color: #141B4D;
+}
+
+#Social {
+  background: #F7F6F2;
+}
+
+#Menu, #Footer {
+  background: #D8DAD9;
+}
+
+#Info, #Interact, #Notice {
+  background: #72A3F3;
+}
+
+#News, #featured, #featSide {
+  background: #C0D3EC;
+}
+
+.displayNone {
+  display: none;
+}
+
+/* scroll bar */
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #233F94; 
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #E10600; 
+}
+
+/* navigation */
+
+nav {
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  height: 80px;
+}
+
+nav ul li img {
+  display: block;
+  width: auto;
+  height: 80px;
+}
+
+nav ul li a {
+  display: block;
+  width: auto;
+  height: 80px;
+  text-align: center;
+  line-height: 80px;
+  font-family: 'Brother 1816 ExtraBold';
+  text-decoration: none;
+  color: #233F94;
+  font-size: 1.4em;
+	padding: 0 10px;
+}
+
+nav ul li a:hover {
+  color: #E10600;
+}
+
+nav ul li:nth-child(1) a:nth-child(1) {
+  width: auto;
+	padding: 0;
+}
+
+nav ul li:nth-child(1) a:nth-child(2) {
+  display: none;
+}
+
+.fixed {
+  position: fixed;
+  width: 100%;
+}
+
+/* content */
+
+.content {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.content h2 {
+  font-family: 'Brother 1816 Bold';
+  font-size: 1.6em;
+  box-sizing: border-box;
+  padding: 0.3em 0;
+}
+
+.content section {
+  display: flex;
+  font-size: 1.5em;
+  box-sizing: border-box;
+  /*padding: 0.1em 0;*/
+}
+
+.content section div {
+  /*min-height: 300px;*/
+}
+
+.content section.triCol div {
+  width: 33%;
+}
+
+.content section.diCol div {
+  width: 50%;
+}
+
+#Notice section {
+  background: #FFDFC5;
+}
+
+#Notice section div  {
+  min-height: 80px;
+}
+
+/* closing */
+
+#Interact .content {
+  display: flex;
+}
+
+#Interact h2 {
+  font-size: 1.7em;
+}
+
+#Contact {
+  /*width: 60%;*/
+  max-height: 450px;
+  overflow: auto;
+  box-sizing: border-box;
+  padding-left: 1em;
+  background: #C0D3EC;
+}
+
+#Contact form {
+  margin: 20px;
+}
+
+#Contact form, #Contact table {
+  width: 100%;
+}
+
+#Contact table td {
+  vertical-align: top;
+}
+
+#Contact table td:nth-child(1) {
+  width: 20%;
+  font-size: 1.2em;
+}
+
+#Contact table td:nth-child(2) {
+  width: 80%;
+}
+
+#Contact input[type=text], #Contact textarea {
+  border: none;
+  background: #F7F6F2;
+  color: #141B4D;
+  font-size: 1.2em;
+  margin-left: 0.1em;
+  margin-bottom: 0.3em;
+  width: 80%;
+  font-family: 'Brother 1816 Book';
+}
+
+#Contact input[type=submit] {
+  border: none;
+	background: #D8DAD9;
+  color: #233F94;
+  font-size: 1em;
+  padding: 0.2em 0.4em;
+  margin-left: 0.1em;
+  margin-bottom: 0.3em;
+  font-family: 'Brother 1816 Bold';
+}
+
+#Contact input[type=submit]:hover {
+  color: #E10600;
+  cursor: pointer;
+}
+
+#Social {
+  width: 70%;
+  overflow: hidden;
+}
+
+#Social section:nth-child(1) {
+  padding: 0;
+}
+
+#Social section:nth-child(1) div {
+  position: relative;
+}
+
+#Social section:nth-child(1) div p {
+  position: absolute;
+  font-family: 'Brother 1816 ExtraBold';
+  /*font-size: 3.3em;*/
+  box-sizing: border-box;
+  padding: 3% 0 0 3%;
+  width: 100%;
+}
+
+#Social section:nth-child(1) div img {
+  width: 100%;
+  height: auto;
+}
+
+#Social section:nth-child(2) {
+  padding: 0;
+  min-height: 100px;
+  display: flex;
+  justify-content: space-between;
+  overflow-y: auto;
+}
+
+#Social section:nth-child(2) div {
+  margin: 10px 0 0 10px;
+  min-height: initial;
+	box-sizing: border-box;
+  position: relative;
+}
+
+#Social section:nth-child(2) div:nth-child(1) {
+  margin: 10px 0 0 0;
+}
+
+#Social section:nth-child(2) div a, .ribbon {
+  background-image: url('../media/redRibbon.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  width: 100%;
+  height: 80px;
+  text-decoration: none;
+  cursor: default;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #DFD06D;
+  line-height: 67px;
+  padding-left: 12%;
+  box-sizing: border-box;
+  font-family: 'Brother 1816 ExtraBold';
+  font-size: 1.1em !important;
+}
+
+.ribbon {
+  margin-left: -20px;
+}
+
+/* side parts */
+
+#featured {
+  min-height: initial;
+  width: 100%;
+  height: 560px;
+}
+
+#featSide {
+  position: absolute;
+  top: auto; right: 0;
+  z-index: 400;
+  width: 30%;
+  height: 560px;
+  overflow: auto;
+}
+
+#featSide a {
+  display: block;
+  text-decoration: none;
+  width: 100%;
+  height: 80px;
+  background: #EF5253;
+  line-height: 80px;
+  text-align: center;
+  font-family: 'Brother 1816 ExtraBold';
+  color: #141B4D;
+  
+}
+
+#featMain {
+  width: 100%;
+  position: relative;
+  /*z-index: 300;*/
+}
+
+#featMain .featBox {
+  position: absolute;
+  top: 0; left: 0;
+  visibility: hidden;
+  z-index: 300;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  /*background: #F7F6F2;*/
+  overflow: auto;
+}
+
+#featMain .featBoxShown {
+  position: relative;
+  top: auto; left: auto;
+  visibility: visible;
+}
+
+#featMain p {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+#featMain div {
+  font-size: 1.1em;
+}
+
+#Twitter {
+  position: absolute;
+  top: 0; right: 0;
+  width: 30%;
+  height: calc(100% - 560px);
+  background: #FEFEFF;
+  overflow: auto;
+}
+
+#Twitter a.twitter-timeline {
+  position: absolute;
+  color: #141B4D;
+  z-index: 100;
+}
+
+#Twitter iframe {
+  z-index: 200;
+}
+
+#Footer p {
+  font-family: 'Brother 1816 ExtraBold';
+  text-align: center;
+  line-height: 80px;
+  font-size: 1.5em;
+}
+
+/* mobile */
+
+@media (max-width: 900px) {
+  
+  /* flatten */
+  
+  #Menu {
+		background: none;
+  }
+  
+  nav ul {
+		display: block;
+  }
+  
+  .content section {
+		display: block;
+  }
+  
+  #Interact .content {
+		display: block;
+  }
+  
+  #Contact, #Social, #Twitter, section {
+		width: 100% !important;
+		max-height: none;
+  }
+  
+  #Twitter, #Twitter a.twitter-timeline {
+		position: relative;
+  }
+  
+  #featSide {
+		display: none;
+  }
+  
+  #featured {
+		height: 100%;
+  }
+  
+  #featMain .featBox {
+		position: relative;
+		top: auto; left: auto;
+		visibility: visible;
+		min-height: 300px;
+  }
+  
+  /* navigation */
+  
+  nav.hidden ul li {
+		display: none;
+  }
+
+  nav ul li {
+		display: flex;
+		justify-content: flex-end;
+		height: 60px;
+  }
+
+  nav ul li a {
+		background: #D8DAD9;
+		width: 120px;
+		height: 60px;
+		line-height: 60px;
+  }
+
+  nav ul li:nth-child(1) {
+		width: 100%;
+		height: 80px;
+		line-height: 80px;
+		display: flex;
+		background: #D8DAD9;  
+		justify-content: space-between;
+		font-size: 1.2em;
+  }
+  
+  nav ul li:nth-child(1) a:nth-child(2) {
+		width: 120px;
+		height: 80px;
+		line-height: 80px;
+		text-align: center;
+		display: block;
+  }
+  
+}​

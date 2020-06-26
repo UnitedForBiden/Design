@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, noarchive">
+    <meta name="format-detection" content="telephone=no">
+    <title>United for Biden</title>
+    <link rel="icon" href="media/favicon.ico">
+    <link href="styles/reset.css" rel="stylesheet">
+    <link href="styles/fonts.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+    <style>
+.container {
+  position: relative;
+  width: 100%;
+  overflow: auto;
+  padding-bottom: 20px;
+}
+
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+</style>
+</head>
+<body>
+    <nav id="Menu" class="hidden">
+        <div class="content">
+            <ul>
+                <li>
+                    <a href="index.html"><img src="media/logo.png" alt="Biden War Room"></a>
+                    <a href="#!" onclick="showMenu();">☰</a>
+                </li>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+                <li>
+                    <a href="editorial.html">Editorial</a>
+                </li>
+                <li>
+                    <a href="community.html" style="color: #E10600;">Community</a>
+                </li>
+                <li>
+                    <a href="store.html">Store</a>
+                </li>
+                <li>
+                    <a href="portal.html">Portal</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <article id="News" class="displayBlock">
+        <div class="content">
+            <section class="monoCol">
+                <div style="display: flex;">
+                    <div style="padding-right: 20px; line-height: 60px; font-weight: bold;">Chat</div>
+                    <div style="padding-right: 20px; line-height: 60px;">Forum</div>
+                    <div style="padding-right: 20px; line-height: 60px;">Games</div>
+                </div>
+            </section>
+            <section class="monoCol">
+                <div class="container">
+                    <iframe width=100% height=480 frameborder="0" scrolling="no" marginheight="0" marginwidth="0" allowtransparency="true" src="https://chatroll.com/embed/chat/united-for-biden-chat?id=exDP-7eqhm7&platform=html"></iframe>
+                </div>
+            </section>
+        </div>
+    </article>
+    <footer id="Footer">
+        <div class="content">
+            <p>Copyright&nbsp;©2020 United&nbsp;for&nbsp;Biden</p>
+        </div>
+    </footer>
+    <script>
+        function getFirstArea() {
+            var firstArea = document.getElementById("Notice");
+            
+            if (!firstArea.classList.contains("displayNone")) return firstArea;
+            
+            return document.getElementById("Info");
+        }
+        
+        function showMenu() {
+            var menu = document.getElementById("Menu");
+            
+            var hidden = !menu.classList.contains("hidden");
+            var fixed = !hidden || menu.classList.contains("fixed");
+            
+            menu.classList = ((hidden ? "hidden" : "") + " " + (fixed ? "fixed" : "")).trim();
+            
+            getFirstArea().style = fixed ? "padding-top: 80px;" : "";
+        }
+        
+        window.onscroll = function() {
+            var topOffset = window.pageXOffset !== undefined ? window.pageYOffset : document.documentElement.scrollTop;
+            
+            document.getElementById("Menu").classList = "hidden" + (topOffset > 0 ? " fixed" : "");
+            
+            getFirstArea().style = topOffset > 0 ? "padding-top: 80px;" : "";
+            
+            //if (topOffset > 160) window.scrollBy(0,-80); //navigation covers beginning
+        };
+        
+        (function() {
+            function scrollHorizontally(e) {
+                e = window.event || e;
+                var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+                document.getElementById('banners').scrollLeft -= (delta*40); // Multiplied by 40
+                e.preventDefault();
+            }
+            if (document.getElementById('banners').addEventListener) {
+                // IE9, Chrome, Safari, Opera
+                document.getElementById('banners').addEventListener("mousewheel", scrollHorizontally, false);
+                // Firefox
+                document.getElementById('banners').addEventListener("DOMMouseScroll", scrollHorizontally, false);
+            } else {
+                // IE 6/7/8
+                document.getElementById('banners').attachEvent("onmousewheel", scrollHorizontally);
+            }
+        })();
+        
+        function showFeatBox(index) {
+            var featBoxes = document.getElementById("featMain").getElementsByClassName("featBox");
+
+            for (var i = 0; i < featBoxes.length; i++) featBoxes[i].classList = "featBox" + (i === index ? " featBoxShown" : "");
+        }
+    </script>
+</body>
+</html>

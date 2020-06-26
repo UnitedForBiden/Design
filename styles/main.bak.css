@@ -1,0 +1,241 @@
+/* basic styles */
+
+body {
+	background: #F7F6F2;
+	font-family: 'Brother 1816 Book';
+	font-size: 11pt;
+	color: #141B4D;
+}
+
+#Menu, #Footer {
+	background: #D8DAD9;
+}
+
+#Info, #Interact {
+	background: #72A3F3;
+}
+
+#News {
+	background: #C0D3EC;
+}
+
+/* scroll bar */
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #233F94; 
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #E10600; 
+}
+
+/* navigation */
+
+nav ul {
+	display: flex;
+}
+
+nav ul li {
+	height: 80px;
+}
+
+nav ul li img {
+	display: block;
+	width: auto;
+	height: 80px;
+}
+
+nav ul li a {
+	display: block;
+	width: 100px;
+	height: 80px;
+	text-align: center;
+	line-height: 80px;
+	font-family: 'Brother 1816 ExtraBold';
+	text-decoration: none;
+	color: #233F94;
+	font-size: 1.6em;
+}
+
+nav ul li a:hover {
+	color: #E10600;
+}
+
+nav ul li:first-child a {
+	display: none;
+}
+
+.fixed {
+	position: fixed;
+	width: 100%;
+}
+
+/* content */
+
+.content {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.content h2 {
+	font-family: 'Brother 1816 Bold';
+	font-size: 1.6em;
+	box-sizing: border-box;
+	padding: 0.3em 0;
+}
+
+.content section {
+	display: flex;
+	font-size: 1.5em;
+	box-sizing: border-box;
+	padding: 0.1em 0;
+}
+
+.content section div {
+	min-height: 300px;
+}
+
+.content section.triCol div {
+	width: 33%;
+}
+
+.content section.diCol div {
+	width: 50%;
+}
+
+/* closing */
+
+#Interact .content {
+	display: flex;
+}
+
+#Interact h2 {
+	font-size: 1.7em;
+}
+
+#Contact {
+	width: 60%;
+	max-height: 450px;
+	overflow: auto;
+	box-sizing: border-box;
+	padding-left: 1em;
+}
+
+#Contact form, #Contact table {
+	width: 100%;
+}
+
+#Contact table td {
+	vertical-align: top;
+}
+
+#Contact table td:nth-child(1) {
+	width: 20%;
+	font-size: 1.2em;
+}
+
+#Contact table td:nth-child(2) {
+	width: 80%;
+}
+
+#Contact input[type=text], #Contact textarea {
+	border: none;
+	background: #F7F6F2;
+	color: #141B4D;
+	font-size: 1.2em;
+	margin-left: 0.1em;
+	margin-bottom: 0.3em;
+	width: 80%;
+	font-family: 'Brother 1816 Book';
+}
+
+#Contact input[type=submit] {
+	border: none;
+	background: #D8DAD9;
+	color: #233F94;
+	font-size: 1em;
+	padding: 0.2em 0.4em;
+	margin-left: 0.1em;
+	margin-bottom: 0.3em;
+	font-family: 'Brother 1816 Bold';
+}
+
+#Contact input[type=submit]:hover {
+	color: #E10600;
+	cursor: pointer;
+}
+
+#Social {
+	width: 40%;
+	max-height: 450px;
+	overflow: auto;
+}
+
+#Footer p {
+	font-family: 'Brother 1816 ExtraBold';
+	text-align: center;
+	line-height: 80px;
+	font-size: 1.5em;
+}
+
+/* mobile */
+
+@media (max-width:768px) {
+	
+	/* flatten */
+	
+	#Menu {
+		background: none;
+	}
+	
+	nav ul {
+		display: block;
+	}
+	
+	.content section {
+		display: block;
+	}
+	
+	#Interact .content {
+		display: block;
+	}
+	
+	#Contact, #Social, section {
+		width: 100% !important;
+		max-height: none;
+	}
+	
+	/* navigation */
+	
+	nav.hidden ul li {
+		display: none;
+	}
+
+	nav ul li {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	nav ul li a {
+		background: #D8DAD9;
+	}
+
+	nav ul li:first-child {
+		width: 100%;
+		display: flex;
+		background: #D8DAD9;		
+		justify-content: space-between;
+		font-size: 1.2em;
+	}
+	
+	nav ul li:first-child a {
+		width: 100px;
+		text-align: center;
+		display: block;
+	}
+	
+}​

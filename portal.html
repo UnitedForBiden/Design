@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, noarchive">
+    <meta name="format-detection" content="telephone=no">
+    <title>United for Biden</title>
+    <link rel="icon" href="media/favicon.ico">
+    <link href="styles/reset.css" rel="stylesheet">
+    <link href="styles/fonts.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+</head>
+<body>
+    <nav id="Menu" class="hidden">
+        <div class="content">
+            <ul>
+                <li>
+                    <a href="index.html"><img src="media/logo.png" alt="Biden War Room"></a>
+                    <a href="#!" onclick="showMenu();">☰</a>
+                </li>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+                <li>
+                    <a href="editorial.html">Editorial</a>
+                </li>
+                <li>
+                    <a href="community.html">Community</a>
+                </li>
+                <li>
+                    <a href="store.html">Store</a>
+                </li>
+                <li>
+                    <a href="portal.html" style="color: #E10600;">Portal</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <article id="News" class="displayBlock">
+        <div class="content">
+            <section class="monoCol">
+                <div>
+                     <p style="padding: 20px; font-size: 1.1em;">The place for login screens.</p>
+                </div>
+            </section>
+        </div>
+    </article>
+    <footer id="Footer">
+        <div class="content">
+            <p>Copyright&nbsp;©2020 United&nbsp;for&nbsp;Biden</p>
+        </div>
+    </footer>
+    <script>
+        function getFirstArea() {
+            var firstArea = document.getElementById("Notice");
+            
+            if (!firstArea.classList.contains("displayNone")) return firstArea;
+            
+            return document.getElementById("Info");
+        }
+        
+        function showMenu() {
+            var menu = document.getElementById("Menu");
+            
+            var hidden = !menu.classList.contains("hidden");
+            var fixed = !hidden || menu.classList.contains("fixed");
+            
+            menu.classList = ((hidden ? "hidden" : "") + " " + (fixed ? "fixed" : "")).trim();
+            
+            getFirstArea().style = fixed ? "padding-top: 80px;" : "";
+        }
+        
+        window.onscroll = function() {
+            var topOffset = window.pageXOffset !== undefined ? window.pageYOffset : document.documentElement.scrollTop;
+            
+            document.getElementById("Menu").classList = "hidden" + (topOffset > 0 ? " fixed" : "");
+            
+            getFirstArea().style = topOffset > 0 ? "padding-top: 80px;" : "";
+            
+            //if (topOffset > 160) window.scrollBy(0,-80); //navigation covers beginning
+        };
+        
+        (function() {
+            function scrollHorizontally(e) {
+                e = window.event || e;
+                var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+                document.getElementById('banners').scrollLeft -= (delta*40); // Multiplied by 40
+                e.preventDefault();
+            }
+            if (document.getElementById('banners').addEventListener) {
+                // IE9, Chrome, Safari, Opera
+                document.getElementById('banners').addEventListener("mousewheel", scrollHorizontally, false);
+                // Firefox
+                document.getElementById('banners').addEventListener("DOMMouseScroll", scrollHorizontally, false);
+            } else {
+                // IE 6/7/8
+                document.getElementById('banners').attachEvent("onmousewheel", scrollHorizontally);
+            }
+        })();
+        
+        function showFeatBox(index) {
+            var featBoxes = document.getElementById("featMain").getElementsByClassName("featBox");
+
+            for (var i = 0; i < featBoxes.length; i++) featBoxes[i].classList = "featBox" + (i === index ? " featBoxShown" : "");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>United for Biden</title>
+    <style>
+        #container {
+            max-width: 1200px;
+            margin: 0 auto;
+            font-size: 1.4em;
+        }
+        nav ul li {
+            display: inline-block;
+            width: 100px;
+            height: 60px;
+        }
+        article p {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        section {
+            box-sizing: border-box;
+            padding: 0 10px;
+            margin: 20px 0;
+        }
+        section div {
+            display: inline-block;
+            min-height: 400px;
+        }
+        section.triCol div {
+            width: 33%;
+        }
+        section.diCol div {
+            width: 49%;
+        }
+        section.monoCol {
+            background: #F8F8F8;
+        }
+        footer p {
+            text-align: center;
+        }
+        td {
+            vertical-align: top;
+        }
+        .scrollArea {
+            max-height: 600px;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+<article id="container">
+    <nav>
+        <ul>
+            <li><a href="#Info">Info</a></li>
+            <li><a href="#News">News</a></li>
+            <li><a href="#Social">Social</a></li>
+            <li><a href="#Contact">Contact</a></li>
+            <li><button>Login</button></li>
+        </ul>
+    </nav>
+    
+    <article id="Info">
+        <section class="triCol">
+            <p>About us</p>
+            <div>Basic info</div>
+            <div>Our goals</div>
+            <div>Basic info</div>
+        </section>
+        <section class="diCol">
+            <p>Essentials</p>
+            <div>United States Goals</div>
+            <div>Candidaton History</div>
+        </section>
+        <section class="triCol">
+            <p>Joe Biden</p>
+            <div>Basic info</div>
+            <div>Childhood</div>
+            <div>Adulthood</div>
+        </section>
+    </article>
+    
+    <article id="News" class="scrollArea">
+        <section class="monoCol">
+            <p>Title</p>
+            <div>News content</div>
+        </section>
+        <section class="monoCol">
+            <p>Title</p>
+            <div>News content</div>
+        </section>
+    </article>
+    
+    <section id="Social" class="monoCol scrollArea">
+        <p>Social</p>
+        <a class="twitter-timeline" href="https://twitter.com/UnitedForBiden">Tweets by UnitedForBiden</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </section>
+    
+    <section id="Contact">
+        <section class="monoCol">
+            <p>Contact</p>
+            <div>
+                <table>
+                    <tr>
+                        <td>Name</td>
+                        <td><input></input></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><input></input></td>
+                    </tr>
+                    <tr>
+                        <td>Title</td>
+                        <td><input></input></td>
+                    </tr>
+                    <tr>
+                        <td>Message</td>
+                        <td><textarea></textarea></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><button>Submit</button></td>
+                    </tr>
+                </table>
+            </div>
+        <section>
+    </section>
+        
+    <footer>
+        <p>Copyright 2020, United for Biden</p>
+    </footer>
+</article>
+
+</body>
+</html>

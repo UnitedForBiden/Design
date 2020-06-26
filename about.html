@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, noarchive">
+    <meta name="format-detection" content="telephone=no">
+    <title>United for Biden</title>
+    <link rel="icon" href="media/favicon.ico">
+    <link href="styles/reset.css" rel="stylesheet">
+    <link href="styles/fonts.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+</head>
+<body>
+    <nav id="Menu" class="hidden">
+        <div class="content">
+            <ul>
+                <li>
+                    <a href="index.html"><img src="media/logo.png" alt="Biden War Room"></a>
+                    <a href="#!" onclick="showMenu();">☰</a>
+                </li>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="about.html" style="color: #E10600;">About</a>
+                </li>
+                <li>
+                    <a href="editorial.html">Editorial</a>
+                </li>
+                <li>
+                    <a href="community.html">Community</a>
+                </li>
+                <li>
+                    <a href="store.html">Store</a>
+                </li>
+                <li>
+                    <a href="portal.html">Portal</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <article id="News" class="displayBlock">
+        <div class="content">
+            <section class="monoCol">
+                <div style="padding: 20px;">
+                    <img style="float:right;" src="media/placeHolder.jpg">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non ex placerat, blandit urna at, finibus urna. Praesent accumsan at felis in tempor. Nullam quis nisi posuere, venenatis orci vitae, molestie elit. Duis lacus dolor, molestie auctor dignissim sit amet, volutpat vitae libero. Maecenas porttitor at enim quis iaculis. Praesent ipsum est, volutpat id tempus nec, gravida a felis. Curabitur quis risus in ante eleifend congue a non enim. Nullam luctus venenatis libero. Vivamus accumsan iaculis sapien, vitae mattis diam mollis vel. Aliquam sed mollis felis, a dignissim lectus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque euismod consequat dui. Vivamus laoreet nisl non malesuada fringilla. Vivamus elementum aliquam ipsum mollis dapibus.</p>
+                    <p>Nulla non aliquam ipsum, facilisis pharetra turpis. Pellentesque tincidunt vitae nulla et ultricies. Donec eget augue sapien. Aliquam non bibendum mi. Quisque pellentesque lorem velit, sed sagittis elit consequat vitae. Vestibulum posuere eros leo, at pretium libero sagittis quis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer eget quam efficitur, feugiat arcu non, mattis augue. Donec congue nisi tincidunt sapien volutpat, nec auctor lorem gravida. Integer posuere lacus id metus volutpat, sit amet rhoncus augue dapibus. Fusce eu erat molestie tortor accumsan congue. Praesent elementum nisl ac eros molestie elementum. Sed pulvinar elementum nisl facilisis convallis. Integer tempor arcu elit, eget tincidunt velit congue a. Donec vel maximus enim. Sed at fermentum orci.</p>
+                    <p>Aliquam eleifend, nibh sed venenatis placerat, erat lacus tempus ex, sit amet vestibulum elit sem vitae odio. Fusce sit amet mi ac lorem euismod consectetur. Aenean a facilisis mauris. Nulla vitae efficitur arcu, vitae porta nunc. Donec rhoncus scelerisque mauris, sed molestie diam bibendum ut. Curabitur ut hendrerit nisl. Quisque nulla ante, hendrerit eu tristique vitae, feugiat ut felis. Fusce non suscipit tellus. Quisque dignissim porttitor justo et euismod.</p>
+                    <p>Curabitur ut arcu dignissim, placerat nunc a, dignissim massa. Curabitur ex sem, venenatis vitae odio efficitur, lacinia pretium odio. Nam vestibulum mauris ut quam aliquet, eget pulvinar metus malesuada. Suspendisse vel arcu at justo rutrum elementum. In volutpat vehicula viverra. Mauris nec sollicitudin purus, eu interdum tellus. Pellentesque vel sollicitudin sem, et luctus velit.</p>
+                    <p>Aliquam sollicitudin magna mauris, a volutpat leo tempus in. Aenean urna erat, vulputate quis accumsan nec, placerat sed ante. Proin ut ultrices lorem. Proin bibendum rhoncus ipsum at fringilla. Vestibulum congue sem non ligula ornare consectetur. Fusce placerat, ipsum mattis viverra sagittis, mi nisl blandit lacus, interdum elementum ipsum tellus eu justo. Phasellus eget lacinia lectus, quis volutpat arcu. Etiam faucibus metus sit amet risus congue, vel sagittis arcu fermentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;</p>
+                </div>
+            </section>
+        </div>
+    </article>
+    <footer id="Footer">
+        <div class="content">
+            <p>Copyright&nbsp;©2020 United&nbsp;for&nbsp;Biden</p>
+        </div>
+    </footer>
+    <script>
+        function getFirstArea() {
+            var firstArea = document.getElementById("Notice");
+            
+            if (!firstArea.classList.contains("displayNone")) return firstArea;
+            
+            return document.getElementById("Info");
+        }
+        
+        function showMenu() {
+            var menu = document.getElementById("Menu");
+            
+            var hidden = !menu.classList.contains("hidden");
+            var fixed = !hidden || menu.classList.contains("fixed");
+            
+            menu.classList = ((hidden ? "hidden" : "") + " " + (fixed ? "fixed" : "")).trim();
+            
+            getFirstArea().style = fixed ? "padding-top: 80px;" : "";
+        }
+        
+        window.onscroll = function() {
+            var topOffset = window.pageXOffset !== undefined ? window.pageYOffset : document.documentElement.scrollTop;
+            
+            document.getElementById("Menu").classList = "hidden" + (topOffset > 0 ? " fixed" : "");
+            
+            getFirstArea().style = topOffset > 0 ? "padding-top: 80px;" : "";
+            
+            //if (topOffset > 160) window.scrollBy(0,-80); //navigation covers beginning
+        };
+        
+        (function() {
+            function scrollHorizontally(e) {
+                e = window.event || e;
+                var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+                document.getElementById('banners').scrollLeft -= (delta*40); // Multiplied by 40
+                e.preventDefault();
+            }
+            if (document.getElementById('banners').addEventListener) {
+                // IE9, Chrome, Safari, Opera
+                document.getElementById('banners').addEventListener("mousewheel", scrollHorizontally, false);
+                // Firefox
+                document.getElementById('banners').addEventListener("DOMMouseScroll", scrollHorizontally, false);
+            } else {
+                // IE 6/7/8
+                document.getElementById('banners').attachEvent("onmousewheel", scrollHorizontally);
+            }
+        })();
+        
+        function showFeatBox(index) {
+            var featBoxes = document.getElementById("featMain").getElementsByClassName("featBox");
+
+            for (var i = 0; i < featBoxes.length; i++) featBoxes[i].classList = "featBox" + (i === index ? " featBoxShown" : "");
+        }
+    </script>
+</body>
+</html>

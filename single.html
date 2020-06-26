@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, noarchive">
+    <meta name="format-detection" content="telephone=no">
+    <title>United for Biden</title>
+    <link href="styles/reset.css" rel="stylesheet">
+    <link href="styles/fonts.css" rel="stylesheet">
+    <link href="styles/main.bak.css" rel="stylesheet">
+</head>
+<body>
+    <nav id="Menu" class="hidden">
+        <div class="content">
+            <ul>
+                <li>
+                    <img src="media/logo.png" alt="Biden War Room">
+                    <a href="#!" onclick="showMenu();">☰</a>
+                </li>
+                <li>
+                    <a href="#Info">Info</a>
+                </li>
+                <li>
+                    <a href="#News">News</a>
+                </li>
+                <li>
+                    <a href="#Social">Social</a>
+                </li>
+                <li>
+                    <a href="#Contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <article id="Info">
+        <div class="content">
+            <h2>About us</h2>
+            <section class="triCol">
+                <div>Basic info</div>
+                <div>Our goals</div>
+                <div>Your help</div>
+            </section>
+            <h2>Essentials</h2>
+            <section class="diCol">
+                <div>United States Goals</div>
+                <div>Candidaton History</div>
+            </section>
+            <h2>Joe Biden</h2>
+            <section class="triCol">
+                <div>Basic info</div>
+                <div>Childhood</div>
+                <div>Adulthood</div>
+            </section>
+        </div>
+    </article>
+    <article id="News">
+        <div class="content">
+            <h2>News title</h2>
+            <section class="monoCol">
+                <div>News content</div>
+            </section>
+            <h2>News title</h2>
+            <section class="monoCol">
+                <div>News content</div>
+            </section>
+        </div>
+    </article>
+    <article id="Interact">
+        <div class="content">
+            <article id="Social">
+                <h2>Social</h2>
+                <section class="monoCol">
+	        <a class="twitter-timeline" href="https://twitter.com/UnitedForBiden">Tweets by UnitedForBiden</a>
+	        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </section>
+            </article>
+            <article id="Contact">
+                <h2>Contact</h2>
+                <section class="monoCol">
+                    <form action="#!">
+                        <table>
+                            <tr>
+                                <td>Name</td>
+                                <td><input type="text"></input></td>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td><input type="text"></input></td>
+                            </tr>
+                            <tr>
+                                <td>Title</td>
+                                <td><input type="text"></input></td>
+                            </tr>
+                            <tr>
+                                <td>Message</td>
+                                <td><textarea></textarea></td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td><input type="submit" value="Send"></input></td>
+                            </tr>
+                        </table>
+                    </form>
+                </section>
+            </article>
+        </div>
+    </article>
+    <footer id="Footer">
+        <div class="content">
+            <p>Copyright ©2020 United for Biden</p>
+        </div>
+    </footer>
+    <script>
+        function showMenu() {
+            var menu = document.getElementById("Menu");
+            
+            var hidden = !menu.classList.contains("hidden");
+            var fixed = !hidden || menu.classList.contains("fixed");
+            
+            menu.classList = ((hidden ? "hidden" : "") + " " + (fixed ? "fixed" : "")).trim();
+            
+            document.getElementById("Info").style = fixed ? "padding-top: 80px;" : "";
+        }
+        
+        window.onscroll = function() {
+            var topOffset = window.pageXOffset !== undefined ? window.pageYOffset : document.documentElement.scrollTop;
+            
+            document.getElementById("Menu").classList = "hidden" + (topOffset > 0 ? " fixed" : "");
+            
+            document.getElementById("Info").style = topOffset > 0 ? "padding-top: 80px;" : "";
+            
+            //if (topOffset > 160) window.scrollBy(0,-80); //navigation covers beginning
+        };
+    </script>
+</body>
+</html>

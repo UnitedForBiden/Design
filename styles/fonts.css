@@ -1,0 +1,79 @@
+/* headers */
+
+@font-face {
+    font-family: 'Brother 1816 Black';
+    src: url('../fonts/Brother1816-Black.eot');
+    src: local('Brother 1816 Black'), local('Brother1816-Black'),
+        url('../fonts/Brother1816-Black.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Brother1816-Black.woff2') format('woff2'),
+        url('../fonts/Brother1816-Black.woff') format('woff'),
+        url('../fonts/Brother1816-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Brother 1816 ExtraBold';
+    src: url('../fonts/Brother1816-ExtraBold.eot');
+    src: local('Brother 1816 ExtraBold'), local('Brother1816-ExtraBold'),
+        url('../fonts/Brother1816-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Brother1816-ExtraBold.woff2') format('woff2'),
+        url('../fonts/Brother1816-ExtraBold.woff') format('woff'),
+        url('../fonts/Brother1816-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+/* subheaders */
+
+@font-face {
+    font-family: 'Brother 1816 Bold';
+    src: url('../fonts/Brother1816-Bold.eot');
+    src: local('Brother 1816 Bold'), local('Brother1816-Bold'),
+        url('../fonts/Brother1816-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Brother1816-Bold.woff2') format('woff2'),
+        url('../fonts/Brother1816-Bold.woff') format('woff'),
+        url('../fonts/Brother1816-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* asides */
+
+@font-face {
+    font-family: "Marydale Black";
+    src: url('../fonts/Marydale-Black.eot');
+    src: local('Marydale Black'), local('Marydale-Black'),
+        url('../fonts/Marydale-Black.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Marydale-Black.woff2') format('woff2'),
+        url('../fonts/Marydale-Black.woff') format('woff'),
+        url('../fonts/Marydale-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+/* body copy */
+
+@font-face {
+    font-family: 'Brother 1816 Book';
+    src: url('../fonts/Brother1816-Book.eot');
+    src: local('Brother 1816 Book'), local('Brother1816-Book'),
+        url('../fonts/Brother1816-Book.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Brother1816-Book.woff2') format('woff2'),
+        url('../fonts/Brother1816-Book.woff') format('woff'),
+        url('../fonts/Brother1816-Book.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "FreightText Pro Medium Regular";
+    src: url('../fonts/FreightTextProMedium-Regularc.eot');
+    src: local('FreightText Pro Medium Regular'), local('FreightTextProMedium-Regular'),
+        url('../fonts/FreightTextProMedium-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FreightTextProMedium-Regular.woff2') format('woff2'),
+        url('../fonts/FreightTextProMedium-Regular.woff') format('woff'),
+        url('../fonts/FreightTextProMedium-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
