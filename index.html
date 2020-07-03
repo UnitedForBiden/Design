@@ -81,48 +81,45 @@
                 </section>
                 <section class="monoCol" id="featured">
                     <div id="featSide">
-                        <a href="#!" onclick="showFeatBox(0);">Banner</a>
+                        <div style="background: #acaead; padding-bottom: 10px;">
+							<p id="featTitle" style="font-size: 1em; font-weight: bold;">Banner</p>
+							<p id="featSubtitle" style="font-size: 1em;">One victory</p>
+						</div>
+						<a href="#!" onclick="showFeatBox(0);" style="background: url('media/winnerBiden.jpg') center center; background-size: 100% auto;"></a>
                         <a href="#!" onclick="showFeatBox(1);">-------</a>
                         <a href="#!" onclick="showFeatBox(2);">-------</a>
                         <a href="#!" onclick="showFeatBox(3);">-------</a>
                         <a href="#!" onclick="showFeatBox(4);">-------</a>
                         <a href="#!" onclick="showFeatBox(5);">-------</a>
-                        <a href="#!" onclick="showFeatBox(6);">-------</a>
                     </div>
                     <div id="featMain">
-                        <div class="featBox featBoxShown">
-                            <div class="ribbon">Featured Content</div>
+						<div class="ribbon">Featured Content</div>
+                        <div class="featBox featBoxShown" featTitle="Banner" featSubtitle="One victory">
                             <div style="text-align: center;">
                                 <img src="media\winnerBiden.jpg" alt="Joe Biden" style="width: 95%; margin-left: -40px; padding: 20px 0;">
                             </div>
                         </div>
-                        <div class="featBox">
-                            <div class="ribbon">Featured Content</div>
+                        <div class="featBox" featTitle="Title 2" featSubtitle="Subtitle 2">
                             <p>Title 2</p>
                             <div>Content 2</div>
                         </div>
-                        <div class="featBox">
-                            <div class="ribbon">Featured Content</div>
+                        <div class="featBox" featTitle="Title 3" featSubtitle="Subtitle 3">
                             <p>Title 3</p>
                             <div>Content 3</div>
                         </div>
-                        <div class="featBox">
-                            <div class="ribbon">Featured Content</div>
+                        <div class="featBox" featTitle="Title 4" featSubtitle="Subtitle 4">
                             <p>Title 4</p>
                             <div>Content 4</div>
                         </div>
-                        <div class="featBox">
-                            <div class="ribbon">Featured Content</div>
+                        <div class="featBox" featTitle="Title 5" featSubtitle="Subtitle 5">
                             <p>Title 5</p>
                             <div>Content 5</div>
                         </div>
-                        <div class="featBox">
-                            <div class="ribbon">Featured Content</div>
+                        <div class="featBox" featTitle="Title 6" featSubtitle="Subtitle 6">
                             <p>Title 6</p>
                             <div>Content 6</div>
                         </div>
-                        <div class="featBox">
-                            <div class="ribbon">Featured Content</div>
+                        <div class="featBox" featTitle="Title 7" featSubtitle="Subtitle 7">
                             <p>Title 7</p>
                             <div>Content 7</div>
                         </div>
@@ -193,7 +190,13 @@
         function showFeatBox(index) {
             var featBoxes = document.getElementById("featMain").getElementsByClassName("featBox");
 
-            for (var i = 0; i < featBoxes.length; i++) featBoxes[i].classList = "featBox" + (i === index ? " featBoxShown" : "");
+            for (var i = 0; i < featBoxes.length; i++) {
+				featBoxes[i].classList = "featBox" + (i === index ? " featBoxShown" : "");
+				if (i === index) {
+					document.getElementById("featTitle").innerHTML = featBoxes[i].getAttribute("featTitle");
+					document.getElementById("featSubtitle").innerHTML = featBoxes[i].getAttribute("featSubtitle");
+				}
+			}
         }
     </script>
 </body>
