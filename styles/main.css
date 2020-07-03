@@ -27,6 +27,10 @@ body {
   display: none;
 }
 
+.expandy {
+	min-height: calc(100vh - 160px);
+}
+
 /* scroll bar */
 
 ::-webkit-scrollbar {
