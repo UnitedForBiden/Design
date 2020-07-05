@@ -15,18 +15,28 @@
         .edit {
             position: relative;
             width: 100%;
-			padding: 20px;
+	padding: 0 20px;
         }
         .editRight {
             width: 30%;
-            height: 450px;
+            height: 100%;
             position: absolute;
             top: auto;
             right: 0;
             overflow: auto;
+	background: #EE5253;
+        }
+        .editRight div {
+	padding: 10px;
         }
         .editLeft {
             width:  70%;
+	min-height: 800px;
+	padding: 20px 0;
+	box-sizing: border-box;
+        }
+        body a {
+	text-decoration: none;
         }
     </style>
 </head>
@@ -67,18 +77,23 @@
             <section class="monoCol">
                 <div class="edit">
                     <div class="editRight">
-                        <div style="text-align: center;">
-                            <img src="media/article1.png" style="width: 80%;">
+		<div>
+                        <div>
+                            <img src="media/article1.png" style="width: 90%;">
                             <p>Article 1</p>
+                            <p><a href="#">READ MORE -&gt;</a></p>
                         </div>
-                        <div style="text-align: center;">
-                            <img src="media/article2.png" style="width: 80%;">
+                        <div>
+                            <img src="media/article2.png" style="width: 90%;">
                             <p>Article 2</p>
+                            <p><a href="#">READ MORE -&gt;</a></p>
                         </div>
-                        <div style="text-align: center;">
-                            <img src="media/article3.png" style="width: 80%;">
+                        <div>
+                            <img src="media/article3.png" style="width: 90%;">
                             <p>Article 3</p>
+                            <p><a href="#">READ MORE -&gt;</a></p>
                         </div>
+		</div>
                     </div>
                     <div class="editLeft">
                         <table style="width: 100%;">
@@ -88,9 +103,33 @@
                                     <p>Etiam luctus quis ex in ornare. Vivamus egestas nibh sed ullamcorper euismod. Nam egestas erat id magna imperdiet elementum. Vestibulum dignissim nibh diam. Nullam ornare dignissim tortor, nec feugiat enim porttitor id. Donec accumsan, leo sit amet efficitur iaculis, enim massa mollis diam, quis mattis est magna vel justo. Praesent feugiat magna tellus. Nam quis rhoncus dui. Duis sodales, enim in tincidunt malesuada, augue ligula posuere diam, quis molestie sem turpis in nunc. Ut hendrerit dolor arcu, vitae feugiat dolor dignissim vel. Proin bibendum nisl sit amet elit convallis, nec cursus erat gravida.</p>
                                 </td>
                             </tr>
+                        </table>
+                        <table style="width: 100%; margin: 0 auto;">
                             <tr>
-                                <td style="text-align: left;"><a href="#">Previous</a></td>
-                                <td style="text-align: right;"><a href="#">Next</a></td>
+                                <td style="text-align: left; padding: 20px 10%;">
+                                    <a href="#" style="">&lt;- PREVIOUS</a>
+                                    <p style="">Article 1</p>
+			</td>
+                                <td style="text-align: right; padding: 10px 10%;">
+                                    <a href="#" style="">NEXT -&gt;</a>
+                                    <p style="">Article 2</p>
+			</td>
+                            </tr>
+                        </table>
+		<p style="font-weight: bold; margin-top: 20px;">January</p>
+		<table style="width: 100%;">
+                            <tr>
+                                <td style="width: 20%; vertical-align: middle;">
+                                    <img src="media/article1.png" style="margin:10px 0; width: 70%;">
+			</td>
+                                <td style="width: 40%;  vertical-align: middle;">
+                                    <p>Title: ____</p>
+                                    <p>Desc: ____</p>
+			</td>
+                                <td style="width: 40%;  vertical-align: middle;">
+                                    <p>Author: ____</p>
+                                    <p>Date: ____</p>
+			</td>
                             </tr>
                         </table>
                     </div>
